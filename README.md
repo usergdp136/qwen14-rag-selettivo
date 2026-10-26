@@ -50,7 +50,7 @@ python significance.py # McNemar + bootstrap (richiede anche baseline_raw.json d
 `qrag.py` usa anche `baseline_raw.json` (run baseline separato) per le righe no-RAG di GSM8K/IFEval. I path assoluti nel codice sono quelli della macchina originale.
 
 ## Articolo scientifico
-Del Papa G. (2026). *RAG selettivo per benchmark su Qwen3-14B: mai peggio del modello base, guadagno piccolo e non significativo su ARC-it*. Preprint (IT), Zenodo. DOI: [10.5281/zenodo.23674922](https://doi.org/10.5281/zenodo.23674922) — licenza testo CC BY 4.0.
+Del Papa G. (2026). *RAG selettivo per benchmark su Qwen3-14B: mai peggio del modello base, guadagno piccolo e non significativo su ARC-it*. Preprint (IT), Zenodo. DOI: [10.5281/zenodo.23674921](https://doi.org/10.5281/zenodo.23674921) (tutte le versioni; v1.1: [10.5281/zenodo.23674951](https://doi.org/10.5281/zenodo.23674951)) — licenza testo CC BY 4.0.
 - PDF articolo: [paper/qwen14_rag_selettivo_preprint.pdf](paper/qwen14_rag_selettivo_preprint.pdf)
 - Versione divulgativa: [paper/divulgativa.pdf](paper/divulgativa.pdf)
 - Codice: [Hugging Face](https://huggingface.co/odelpa/qwen14-rag-selettivo) · [GitHub](https://github.com/usergdp136/qwen14-rag-selettivo)
