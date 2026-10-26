@@ -1,0 +1,32 @@
+{
+ "name": "qwen14_rag_v1_selective",
+ "base_model": "mlx-community/Qwen3-14B-8bit (non-thinking, greedy)",
+ "source_job": "../qwen14_rag_v1",
+ "retrieval": "BM25 top-3, rr=normalised top score",
+ "dev_split": {
+  "arc_it": "sapienzanlp/arc_italian validation (286, disjoint from test)",
+  "gsm8k": "openai/gsm8k train sample 60 (seed 99)",
+  "ifeval": "google/IFEval 60 ids not in the 100 test ids"
+ },
+ "gate_rule": "RAG on for benchmark b only if dev net gain > 0 AND 95% bootstrap CI lower bound >= 0; else off",
+ "rag_on": {
+  "arc_it": true,
+  "gsm8k": false,
+  "ifeval": false
+ },
+ "arc_it_gate": {
+  "src": "wiki_math",
+  "rr_min": 0.3,
+  "rag_conf_min": 0.0,
+  "norag_conf_max": 0.9,
+  "dev_net": 2,
+  "dev_ci95_pt": [
+   0.0,
+   1.75
+  ]
+ },
+ "gsm8k_reason": "dev +1/60 CI [0,5] (n too small); off per spec; test gated would be -1.33pt",
+ "ifeval_reason": "dev net 0 -> off",
+ "success_rule": "none (no automatic success:false); report honest numbers per benchmark",
+ "publish": "NOT published; needs explicit OK"
+}

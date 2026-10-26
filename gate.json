@@ -1,0 +1,39 @@
+{
+ "arc": {
+  "src": "wiki_math",
+  "gate": [
+   0.3,
+   0,
+   0.9
+  ],
+  "net": 2,
+  "keep": true,
+  "norag": 0.8916,
+  "always_on": {
+   "wiki_it": 0.8776,
+   "wiki_math": 0.8951
+  }
+ },
+ "gsm8k": {
+  "src": "wiki_it",
+  "tr": 0.2359,
+  "net": 1,
+  "keep": true,
+  "norag": 0.95,
+  "always_on": {
+   "wiki_it": 0.95,
+   "wiki_math": 0.9667
+  }
+ },
+ "ifeval": {
+  "src": null,
+  "tr": 9,
+  "net": 0,
+  "keep": false,
+  "norag": 0.9,
+  "always_on": {
+   "wiki_it": 0.85,
+   "wiki_math": 0.85
+  }
+ }
+}
